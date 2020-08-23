@@ -9,7 +9,7 @@ python_version = "{python_version}"
 [packages]
 
 [dev-packages]
-{{cookiecutter.reponame}} = {editable = True, path = "."}
+{{cookiecutter.repo_name}} = {editable = True, path = "."}
 black = "==19.3b0"
 flake8 = "*"
 isort = "*"
