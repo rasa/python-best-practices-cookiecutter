@@ -34,8 +34,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build docker image
-        run: docker build . -t {{cookiecutter.repo_name}}:test
+        run: docker build . -t {{cookiecutter.project_module}}:test
 
       - name: Smoke test docker image
         run: |
-          docker run --rm {{cookiecutter.repo_name}}:test 10
+          docker run --rm {{cookiecutter.project_module}}:test 10

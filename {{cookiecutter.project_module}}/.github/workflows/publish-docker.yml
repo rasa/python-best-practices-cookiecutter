@@ -16,4 +16,4 @@ jobs:
         registry: docker.pkg.github.com
         username: ${{ "{{ github.actor }}" }}
         password: ${{ "{{ secrets.GITHUB_TOKEN }}" }}
-        image_name: ${{ "{{ github.repository }}" }}/{{cookiecutter.repo_name}}
+        image_name: ${{ "{{ github.repository }}" }}/{{cookiecutter.project_module}}
