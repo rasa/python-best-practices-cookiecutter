@@ -7,4 +7,4 @@ def fib(number: int) -> int:
         return 0
     # Second Fibonacci number is 1
     else:
-        return fib(number - 1) + fib(number - 2)
+        return (fib(number - 1) + fib(number - 2))
