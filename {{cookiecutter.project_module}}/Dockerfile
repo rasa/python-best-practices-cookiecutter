@@ -34,5 +34,5 @@ USER appuser
 COPY . .
 
 # Run the executable
-ENTRYPOINT ["python", "-m", "{{cookiecutter.repo_name}}"]
+ENTRYPOINT ["python", "-m", "{{cookiecutter.project_module}}"]
 CMD ["10"]

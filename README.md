@@ -25,7 +25,7 @@ pipx install pipenv
 pipx run cookiecutter gh:crashdummymch/python-best-practices-cookiecutter
 
 # Enter project directory
-cd <repo_name>
+cd <project_module>
 
 # Initialise git repo
 git init
