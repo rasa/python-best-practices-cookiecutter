@@ -1,5 +1,17 @@
-import pytest
 import importlib
+import pathlib
+import pytest
+
+
+def pytest_collection_modifyitems(config, items):
+    # python 3.4/3.5 compat: rootdir = pathlib.Path(str(config.rootdir))
+    rootdir = pathlib.Path(config.rootdir)
+    for item in items:
+        rel_path = pathlib.Path(item.fspath).relative_to(rootdir)
+        for part in rel_path.parts:
+            if part.endswith('_tests'):
+                mark = getattr(pytest.mark, part)
+                item.add_marker(mark)
 
 def pytest_generate_tests(metafunc):
     for fixture in metafunc.fixturenames:
