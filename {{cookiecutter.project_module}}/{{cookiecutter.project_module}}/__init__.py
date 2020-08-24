@@ -1,10 +1,8 @@
 """
 Module information
 """
-
-def fib(number: int) -> int:
-    if number <= 1:
-        return 0
-    # Second Fibonacci number is 1
+def fib(n):
+    if n <= 1:
+        return n
     else:
-        return (fib(number - 1) + fib(number - 2))
+        return(fib(n-1) + fib(n-2))
