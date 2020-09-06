@@ -11,7 +11,7 @@ python_version = "{python_version}"
 [dev-packages]
 {{cookiecutter.project_module}} = {editable = true,path = "."}
 black = "==19.3b0"
-flake8 = "*"
+pylint = "*"
 isort = "*"
 mypy = "*"
 pre-commit = "*"
