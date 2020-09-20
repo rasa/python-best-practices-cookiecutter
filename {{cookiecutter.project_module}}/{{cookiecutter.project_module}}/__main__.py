@@ -1,7 +1,7 @@
 import sys
 
-import {{cookiecutter.project_module}}
+from {{cookiecutter.project_module}}.fib import fib
 
 if __name__ == "__main__":
     n = int(sys.argv[1])
-    print({{cookiecutter.project_module}}.fib(n))
+    print(fib(n))
