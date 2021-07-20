@@ -2,8 +2,7 @@
 
 ## Setup
 ```sh
-# Install dependencies
-pipenv install --dev
+poetry install
 
 # Setup pre-commit and pre-push hooks
 pipenv run pre-commit install -t pre-commit
