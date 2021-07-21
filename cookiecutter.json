@@ -1,6 +1,6 @@
 {
   "project_name": "BestPractices",
-  "project_module": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_module": "{{ cookiecutter.project_name }}",
   "project_description": "Best Practices cookie cutter template",
   "project_author": "unknown",
   "project_author_email": "unknown@unknown.com"
