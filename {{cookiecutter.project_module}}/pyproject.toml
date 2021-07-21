@@ -11,22 +11,22 @@ packages = [
 python = "^{python_version}"
 
 [tool.poetry.dev-dependencies]
-pytest = { version = "*" }
-pytest-html = { version = "*" }
-pytest-cov = { version = "*" }
-pytest-metadata = { version = "*" }
-pytest-xdist = { version = "*" }
+black = { version = "*", allow-prereleases = true }
+isort = { version = "*" }
+mypy = { version = "*" }
 pytest-aio = { version = "*" }
 pytest-assume = { version = "*" }
 pytest-asyncio = { version = "*" }
-black = { version = "*", allow-prereleases = true }
-mypy = { version = "*" }
-isort = { version = "*" }
 pytest-colordots = { version = "*" }
+pytest-cov = { version = "*" }
 pytest-datadir = { version = "*" }
 pytest-depends = { version = "*" }
+pytest-html = { version = "*" }
+pytest-metadata = { version = "*" }
 pytest-mock = { version = "*" }
 pytest-sugar = { version = "*" }
+pytest = { version = "*" }
+pytest-xdist = { version = "*" }
 
 
 [build-system]
