@@ -3,6 +3,9 @@ name = "{{cookiecutter.project_module}}"
 version = "0.1.0"
 description = ""
 authors = ["{{cookiecutter.project_author}} <{{cookiecutter.project_author_email}}>"]
+packages = [
+    { include = "{{cookiecutter.project_module}}" }
+]
 
 [tool.poetry.dependencies]
 python = "^{python_version}"
