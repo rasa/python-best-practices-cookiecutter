@@ -9,7 +9,7 @@ def pytest_collection_modifyitems(config, items):
     for item in items:
         rel_path = pathlib.Path(item.fspath).relative_to(rootdir)
         for part in rel_path.parts:
-            if part.endswith("_tests"):
+            if part.endswith("Tests"):
                 mark = getattr(pytest.mark, part)
                 item.add_marker(mark)
 
