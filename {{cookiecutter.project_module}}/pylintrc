@@ -295,9 +295,7 @@ attr-naming-style=camelCase
 #attr-rgx=
 
 # Bad variable names which should always be refused, separated by a comma.
-bad-names=foo,
-          bar,
-          baz,
+bad-names= baz,
           toto,
           tutu,
           tata
@@ -584,7 +582,7 @@ max-returns=6
 max-statements=50
 
 # Minimum number of public methods for a class (see R0903).
-min-public-methods=2
+min-public-methods=0
 
 
 [EXCEPTIONS]
