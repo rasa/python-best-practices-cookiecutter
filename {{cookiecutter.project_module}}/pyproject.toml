@@ -14,6 +14,7 @@ python = "^{python_version}"
 black = { version = "*", allow-prereleases = true }
 isort = { version = "*" }
 mypy = { version = "*" }
+pyest-isort = { version = "*" }
 pytest-aio = { version = "*" }
 pytest-assume = { version = "*" }
 pytest-asyncio = { version = "*" }
