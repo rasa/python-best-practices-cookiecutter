@@ -17,6 +17,7 @@ mypy = { version = "*" }
 pytest-aio = { version = "*" }
 pytest-assume = { version = "*" }
 pytest-asyncio = { version = "*" }
+pytest-black = { version = "*" }
 pytest-colordots = { version = "*" }
 pytest-cov = { version = "*" }
 pytest-datadir = { version = "*" }
@@ -24,6 +25,7 @@ pytest-depends = { version = "*" }
 pytest-html = { version = "*" }
 pytest-metadata = { version = "*" }
 pytest-mock = { version = "*" }
+pytest-pylint = { version = "*" }
 pytest-sugar = { version = "*" }
 pytest = { version = "*" }
 pytest-xdist = { version = "*" }
