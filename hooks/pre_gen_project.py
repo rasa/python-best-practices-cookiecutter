@@ -5,5 +5,5 @@ import sys
 # module_name = "{{ cookiecutter.project_module }}"
 
 # if not re.match(MODULE_REGEX, module_name):
-    # print("ERROR: %s is not a valid Python module name!" % module_name)
-    # sys.exit(1)
+# print("ERROR: %s is not a valid Python module name!" % module_name)
+# sys.exit(1)
