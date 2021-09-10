@@ -14,7 +14,8 @@ python = "^{python_version}"
 black = { version = "*", allow-prereleases = true }
 isort = { version = "*" }
 mypy = { version = "*" }
-pyest-isort = { version = "*" }
+poethepoet = { version = "*" }
+pytest-isort = { version = "*" }
 pytest-aio = { version = "*" }
 pytest-assume = { version = "*" }
 pytest-asyncio = { version = "*" }
@@ -31,6 +32,18 @@ pytest-sugar = { version = "*" }
 pytest = { version = "*" }
 pytest-xdist = { version = "*" }
 
+[tool.pytest.ini_options]
+python_classes = "Test*"
+python_files = "*Tests.py"
+addopts = "-v"
+testpaths = [
+    "{{cookiecutter.project_module}}",
+    "tests"
+]
+markers = {}
+
+[tool.poe.tasks]
+pytest = "pytest --isort --black --pylint -v"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

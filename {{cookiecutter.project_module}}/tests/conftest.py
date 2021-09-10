@@ -6,7 +6,7 @@ import pathlib
 import pytest
 
 
-def pytestCollectionModifyItems(config, items):
+def pytest_collection_modifyItems(config, items): # pylint: disable=invalid-name
     """
     pytest add markers dynamically based on directory name
     <directoryname>Test
@@ -21,7 +21,7 @@ def pytestCollectionModifyItems(config, items):
                 item.add_marker(mark)
 
 
-def pytestGenerateTests(metafunc):
+def pytest_generate_tests(metafunc): # pylint: disable=invalid-name
     """
     If fixture begins with data_ add a parametrize fixture
     """
