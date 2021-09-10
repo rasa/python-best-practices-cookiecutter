@@ -40,7 +40,10 @@ testpaths = [
     "{{cookiecutter.project_module}}",
     "tests"
 ]
-markers = {}
+markers = [
+    "unitTests: unit tests",
+    "integrationTests: integration tests",
+]
 
 [tool.poe.tasks]
 pytest = "pytest --isort --black --pylint -v"

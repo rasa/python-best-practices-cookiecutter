@@ -2,14 +2,16 @@
 pytest fixtures and functions
 """
 import importlib
+import logging
 import pathlib
 import pytest
 
+logger = logging.getLogger(__name__)
 
-def pytest_collection_modifyItems(config, items): # pylint: disable=invalid-name
+def pytest_collection_modifyitems(config, items): # pylint: disable=invalid-name
     """
     pytest add markers dynamically based on directory name
-    <directoryname>Test
+    <directoryname>Tests
     """
     # python 3.4/3.5 compat: rootdir = pathlib.Path(str(config.rootdir))
     rootdir = pathlib.Path(config.rootdir)
@@ -27,6 +29,7 @@ def pytest_generate_tests(metafunc): # pylint: disable=invalid-name
     """
     for fixture in metafunc.fixturenames:
         if "data_" in fixture:
+            logger.info("getting fixture=%s", fixture)
             metafunc.parametrize(fixture, loadTests(fixture))
 
 
