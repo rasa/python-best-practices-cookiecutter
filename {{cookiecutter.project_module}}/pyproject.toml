@@ -33,7 +33,7 @@ pytest = { version = "*" }
 pytest-xdist = { version = "*" }
 
 [tool.pytest.ini_options]
-python_classes = "Test*"
+python_classes = "*Test"
 python_functions = "*Test"
 python_files = "*Tests.py"
 addopts = "-v"
