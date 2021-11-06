@@ -2,41 +2,19 @@
 repos:
 - repo: local
   hooks:
-  - id: isort
-    name: isort
+  - id: codeformat
+    name: codeformat
     stages: [commit]
     language: system
-    entry: pipenv run isort
+    entry: poetry run codeFormat
     types: [python]
-
-  - id: black
-    name: black
-    stages: [commit]
-    language: system
-    entry: pipenv run black
-    types: [python]
-
-  - id: pylint
-    name: pylint
-    stages: [commit]
-    language: system
-    entry: pipenv run pylint {{cookiecutter.project_module}}
-    types: [python]
-    exclude: '^tests.*$'
-
-  - id: mypy
-    name: mypy
-    stages: [commit]
-    language: system
-    entry: pipenv run mypy
-    types: [python]
-    require_serial: true
+    pass_filenames: false
 
   - id: pytest
     name: pytest
     stages: [commit]
     language: system
-    entry: pipenv run pytest
+    entry: poetry run pytest --isort --black --mypy --pylint --html=reports/codeTests/index.html
     types: [python]
     pass_filenames: false
 
@@ -44,6 +22,6 @@ repos:
     name: pytest
     stages: [push]
     language: system
-    entry: pipenv run pytest --cov --cov-fail-under=50 --cov-report html:reports
+    entry: poetry run pytest --cov --cov-fail-under=50 --cov-report html:reports/codeCov/
     types: [python]
     pass_filenames: false

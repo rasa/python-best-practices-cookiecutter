@@ -29,8 +29,12 @@ pytest-metadata = { version = "*" }
 pytest-mock = { version = "*" }
 pytest-pylint = { version = "*" }
 pytest-sugar = { version = "*" }
+pytest-isort = { version = "*" }
+pytest-mypy = { version = "*" }
+pytest-pylint = { version = "*" }
 pytest = { version = "*" }
 pytest-xdist = { version = "*" }
+poethepoet = { version = "*" }
 
 [tool.pytest.ini_options]
 python_classes = "*Test"
@@ -39,7 +43,8 @@ python_files = "*Tests.py"
 addopts = "-v"
 testpaths = [
     "{{cookiecutter.project_module}}",
-    "tests"
+    "tests",
+    "scripts",
 ]
 markers = [
     "unitTests: unit tests",
@@ -47,8 +52,23 @@ markers = [
 ]
 
 [tool.poe.tasks]
-pytest = "pytest --isort --black --pylint -v"
+codeFormat = "pytest --isort --black --pylint --mypy -vs"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.cov.run]
+source = ["{{cookiecutter.project_module}}"]
+omit = ["{{cookiecutter.project_module}}/__main__.py"]
+
+[tool.cov.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self\.debug",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+]
