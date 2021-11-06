@@ -14,8 +14,6 @@ python = "^{python_version}"
 black = { version = "*", allow-prereleases = true }
 isort = { version = "*" }
 mypy = { version = "*" }
-poethepoet = { version = "*" }
-pytest-isort = { version = "*" }
 pytest-aio = { version = "*" }
 pytest-assume = { version = "*" }
 pytest-asyncio = { version = "*" }
@@ -31,7 +29,6 @@ pytest-pylint = { version = "*" }
 pytest-sugar = { version = "*" }
 pytest-isort = { version = "*" }
 pytest-mypy = { version = "*" }
-pytest-pylint = { version = "*" }
 pytest = { version = "*" }
 pytest-xdist = { version = "*" }
 poethepoet = { version = "*" }
@@ -66,9 +63,9 @@ omit = ["{{cookiecutter.project_module}}/__main__.py"]
 exclude_lines = [
     "pragma: no cover",
     "def __repr__",
-    "if self\.debug",
+    'if self\.debug',
     "raise AssertionError",
     "raise NotImplementedError",
     "if 0:",
-    "if __name__ == .__main__.:",
+    'if __name__ == .__main__.:',
 ]
