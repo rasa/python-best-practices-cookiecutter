@@ -12,6 +12,7 @@ python = "^{python_version}"
 
 [tool.poetry.dev-dependencies]
 black = { version = "*", allow-prereleases = true }
+flake8 = { version = "*" }
 isort = { version = "*" }
 mypy = { version = "*" }
 pytest-aio = { version = "*" }
@@ -22,6 +23,7 @@ pytest-colordots = { version = "*" }
 pytest-cov = { version = "*" }
 pytest-datadir = { version = "*" }
 pytest-depends = { version = "*" }
+pytest-flake8 = { version = "*" }
 pytest-html = { version = "*" }
 pytest-metadata = { version = "*" }
 pytest-mock = { version = "*" }
@@ -31,7 +33,6 @@ pytest-isort = { version = "*" }
 pytest-mypy = { version = "*" }
 pytest = { version = "*" }
 pytest-xdist = { version = "*" }
-poethepoet = { version = "*" }
 
 [tool.pytest.ini_options]
 python_classes = "*Test"
@@ -48,12 +49,12 @@ markers = [
     "integrationTests: integration tests",
 ]
 
-[tool.poe.tasks]
-codeFormat = "pytest --isort --black --pylint --mypy -vs"
-
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
 
 [tool.cov.run]
 source = ["{{cookiecutter.project_module}}"]

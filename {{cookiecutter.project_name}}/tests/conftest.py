@@ -4,11 +4,13 @@ pytest fixtures and functions
 import importlib
 import logging
 import pathlib
+
 import pytest
 
 logger = logging.getLogger(__name__)
 
-def pytest_collection_modifyitems(config, items): # pylint: disable=invalid-name
+
+def pytest_collection_modifyitems(config, items):  # pylint: disable=invalid-name
     """
     pytest add markers dynamically based on directory name
     <directoryname>Tests
@@ -23,7 +25,7 @@ def pytest_collection_modifyitems(config, items): # pylint: disable=invalid-name
                 item.add_marker(mark)
 
 
-def pytest_generate_tests(metafunc): # pylint: disable=invalid-name
+def pytest_generate_tests(metafunc):  # pylint: disable=invalid-name
     """
     If fixture begins with data_ add a parametrize fixture
     """
