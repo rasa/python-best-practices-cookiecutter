@@ -39,6 +39,10 @@ python_classes = "*Test"
 python_functions = "*Test"
 python_files = "*Tests.py"
 addopts = "-v"
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s %(levelname)s $(filename)s %(funcName)s %(lineno)d %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
 testpaths = [
     "{{cookiecutter.project_module}}",
     "tests",
