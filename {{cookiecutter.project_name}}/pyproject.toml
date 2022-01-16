@@ -34,6 +34,15 @@ pytest-mypy = { version = "*" }
 pytest = { version = "*" }
 pytest-xdist = { version = "*" }
 
+[tool.pytest.scripts]
+mypyTests = "scripts.codeFormat:mypyTests"
+isortTests = "scripts.codeFormat:isortTests"
+isortFix = "scripts.codeFormat:isortFix"
+blackTests = "scripts.codeFormat:blackTests"
+blackFix = "scripts.codeFormat:blackFix"
+flake8Tests = "scripts.codeFormat:flake8Tests"
+pytestCovTerm = "scripts.codeFormat:pytestCovTerm"
+
 [tool.pytest.ini_options]
 python_classes = "*Test"
 python_functions = "*Test"
