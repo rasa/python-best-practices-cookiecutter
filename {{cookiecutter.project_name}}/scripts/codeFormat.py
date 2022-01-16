@@ -24,3 +24,9 @@ def flake8Tests():
 
 def pytestCovTerm():
     pytest.main(["--cov-report=term-missing", "--cov={{cookiecutter.project_module}}", "tests/"])
+
+def pytestTestReports():
+    pytest.main(["--isort", "--black", "--mypy", "--pylint", "--html=reports/codeTests/index.html"])
+
+def pytestCovReports():
+    pytest.main(["--cov", "--cov-fail-under=50", "--cov-report html:reports/codeCov/"])

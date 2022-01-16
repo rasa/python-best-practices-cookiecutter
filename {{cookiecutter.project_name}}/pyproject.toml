@@ -42,6 +42,8 @@ blackTests = "scripts.codeFormat:blackTests"
 blackFix = "scripts.codeFormat:blackFix"
 flake8Tests = "scripts.codeFormat:flake8Tests"
 pytestCovTerm = "scripts.codeFormat:pytestCovTerm"
+pytestTestReports = "scripts.codeFormat:pytestTestReports"
+pytestCovReports = "scripts.codeFormat:pytestCovReports"
 
 [tool.pytest.ini_options]
 python_classes = "*Test"
