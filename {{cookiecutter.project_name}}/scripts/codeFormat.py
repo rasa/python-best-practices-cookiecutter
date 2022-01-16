@@ -29,4 +29,4 @@ def pytestTestReports():
     pytest.main(["--isort", "--black", "--mypy", "--pylint", "--html=reports/codeTests/index.html"])
 
 def pytestCovReports():
-    pytest.main(["--cov", "--cov-fail-under=50", "--cov-report html:reports/codeCov/"])
+    pytest.main(["--cov", "--cov-fail-under=50", "--cov-report=html:reports/codeCov/"])
