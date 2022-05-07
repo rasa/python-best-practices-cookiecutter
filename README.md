@@ -22,7 +22,7 @@ python3 -m pipx ensurepath
 pipx install poetry
 
 # Use cookiecutter to create project from this template
-pipx run cookiecutter gh:crashdummymch/python-best-practices-cookiecutter
+pipx run cookiecutter gh:rasa/python-best-practices-cookiecutter
 
 # Enter project directory
 cd <project_module>
