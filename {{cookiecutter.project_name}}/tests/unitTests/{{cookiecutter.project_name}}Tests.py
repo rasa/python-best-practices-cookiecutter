@@ -1,4 +1,5 @@
 import logging
+import sys
 
 from {{cookiecutter.project_module}}.fib import fib
 
