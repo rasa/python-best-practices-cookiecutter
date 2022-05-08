@@ -13,5 +13,7 @@ streamHandler.setFormatter(formatter)
 logger.addHandler(streamHandler)
 logger.setLevel(logging.INFO)
 
+
 def fibTest(data_fib) -> None:
+    """fibtest"""
     assert fibx(data_fib[0]) == data_fib[1]
