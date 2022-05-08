@@ -4,22 +4,24 @@ Module information
 
 
 def fib():
-    x1 = 0
-    x2 = 1
+    """fib"""
+    ex1 = 0
+    ex2 = 1
 
-    def get_next_number():
-        nonlocal x1, x2
-        x3 = x1 + x2
-        x1, x2 = x2, x3
-        return x3
+    def getNextNumber():
+        nonlocal ex1, ex2
+        ex3 = ex1 + ex2
+        ex1, ex2 = ex2, ex3
+        return ex3
 
-    return get_next_number
+    return getNextNumber
 
 
 def fibx(number: int):
+    """fibx"""
     myfib = fib()
     if number in [0, 1]:
         return number
-    for i in range(2, number + 1):
+    for _ in range(2, number + 1):
         num = myfib()
     return num

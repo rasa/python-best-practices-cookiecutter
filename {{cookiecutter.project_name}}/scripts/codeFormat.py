@@ -1,8 +1,11 @@
+""" scripts/codeFormat.py """
+# pylint: disable=C0116 # Missing function or method docstring (missing-function-docstring)
+
 import os
 import pytest
 
 
-def mypyTests(args=None):
+def mypyTests(_=None):
     pytest.main(["--mypy", "-m", "mypy"])
 
 
