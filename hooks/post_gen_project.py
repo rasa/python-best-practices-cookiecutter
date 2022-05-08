@@ -5,7 +5,7 @@ import sys
 def set_python_version():
     python_version = str(sys.version_info.major) + "." + str(sys.version_info.minor)
 
-    file_names = ["pyproject.toml" ]
+    file_names = ["pyproject.toml"]
     for file_name in file_names:
         with open(file_name) as f:
             contents = f.read()
