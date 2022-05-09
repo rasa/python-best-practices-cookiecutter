@@ -12,6 +12,7 @@ Best practices [cookiecutter](https://github.com/audreyr/cookiecutter) template 
 - Deployment ready with [Docker](https://docker.com/)
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
 - Dependency management with [Poetry](https://python-poetry.org/)
+- Code coverage with [Codecov](https://codecov.io)
 
 ## Quickstart 
 ```sh
