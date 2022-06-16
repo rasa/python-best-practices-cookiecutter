@@ -1,4 +1,4 @@
-""" tests/unit_tests/{{cookiecutter.project_name}}_tests.py """
+"""Tests/unit_tests/{{cookiecutter.project_name}}_tests.py."""
 import logging
 import sys
 
@@ -13,5 +13,5 @@ logger.setLevel(logging.INFO)
 
 
 def test_fib(data_fib) -> None:
-    """test_fib"""
+    """Test_fib."""
     assert fibx(data_fib[0]) == data_fib[1]

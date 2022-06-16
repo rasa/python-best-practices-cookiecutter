@@ -1,4 +1,4 @@
-""" {{cookiecutter.project_module}}/__main__.py """
+"""{{cookiecutter.project_module}}/__main__.py."""
 import sys
 
 from {{cookiecutter.project_module}} import fib
