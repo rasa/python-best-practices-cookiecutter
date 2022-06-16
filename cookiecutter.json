@@ -1,7 +1,7 @@
 {
-  "project_name": "BestPractices",
-  "project_module": "{{ cookiecutter.project_name }}",
-  "project_description": "Best Practices cookie cutter template",
-  "project_author": "unknown",
-  "project_author_email": "unknown@unknown.com"
+  "project_name": "EnterProjectNameUsingCamelCase",
+  "project_module": "enter_project_name_using_snake_case",
+  "project_description": "Enter project description",
+  "project_author": "Enter your name",
+  "project_author_email": "enter.your.email.address@example.com"
 }

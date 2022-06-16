@@ -8,13 +8,13 @@ def fib():
     ex1 = 0
     ex2 = 1
 
-    def getNextNumber():
+    def get_next_number():
         nonlocal ex1, ex2
         ex3 = ex1 + ex2
         ex1, ex2 = ex2, ex3
         return ex3
 
-    return getNextNumber
+    return get_next_number
 
 
 def fibx(number: int):

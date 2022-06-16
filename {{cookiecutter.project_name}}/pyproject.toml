@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "{{cookiecutter.project_module}}"
 version = "0.1.0"
-description = ""
+description = "{{cookiecutter.project_description}}"
 authors = ["{{cookiecutter.project_author}} <{{cookiecutter.project_author_email}}>"]
 packages = [
     { include = "{{cookiecutter.project_module}}" }
@@ -36,21 +36,21 @@ pytest = { version = "*" }
 pytest-xdist = { version = "*" }
 
 [tool.pytest.scripts]
-mypyTests = "scripts.codeFormat:mypyTests"
-isortTests = "scripts.codeFormat:isortTests"
-isortFix = "scripts.codeFormat:isortFix"
-blackTests = "scripts.codeFormat:blackTests"
-blackFix = "scripts.codeFormat:blackFix"
-pylintTests = "scripts.codeFormat:pylintTests"
-flake8Tests = "scripts.codeFormat:flake8Tests"
-pytestCovTerm = "scripts.codeFormat:pytestCovTerm"
-pytestTestReports = "scripts.codeFormat:pytestTestReports"
-pytestCovReports = "scripts.codeFormat:pytestCovReports"
+test_mypy = "scripts.code_format:test_mypy"
+test_isort = "scripts.code_format:test_isort"
+test_isort_fix = "scripts.code_format:test_isort_fix"
+test_black = "scripts.code_format:test_black"
+test_black_fix = "scripts.code_format:test_black_fix"
+test_pylint = "scripts.code_format:test_pylint"
+test_flake8 = "scripts.code_format:test_flake8"
+pytest_cov_term = "scripts.code_format:pytest_cov_term"
+pytest_test_reports = "scripts.code_format:pytest_test_reports"
+pytest_cov_reports = "scripts.code_format:pytest_cov_reports"
 
 [tool.pytest.ini_options]
-python_classes = "*Test"
-python_functions = "*Test"
-python_files = "*Tests.py"
+python_classes = "test_*"
+python_functions = "test_*"
+python_files = "test_*.py"
 addopts = "-v"
 log_cli = true
 log_cli_level = "INFO"
@@ -61,8 +61,8 @@ testpaths = [
     "tests",
 ]
 markers = [
-    "unitTests: unit tests",
-    "integrationTests: integration tests",
+    "unit_tests: unit tests",
+    "integration_tests: integration tests",
 ]
 filterwarnings = [
     # pytest_sugar.py:169: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.

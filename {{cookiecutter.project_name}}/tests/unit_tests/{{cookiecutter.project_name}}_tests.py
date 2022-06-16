@@ -1,6 +1,4 @@
-""" tests/unitTests/{{cookiecutter.project_name}}Tests.py """
-# pylint: disable=C0103 # Module name "{{cookiecutter.project_name}}Tests" doesn't conform to camelCase naming style (invalid-name)
-# pylint: disable=E0401 # Unable to import '{{cookiecutter.project_module}}' (import-error)
+""" tests/unit_tests/{{cookiecutter.project_name}}_tests.py """
 import logging
 import sys
 
@@ -14,6 +12,6 @@ logger.addHandler(streamHandler)
 logger.setLevel(logging.INFO)
 
 
-def fibTest(data_fib) -> None:
-    """fibtest"""
+def test_fib(data_fib) -> None:
+    """test_fib"""
     assert fibx(data_fib[0]) == data_fib[1]

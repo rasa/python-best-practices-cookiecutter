@@ -6,7 +6,7 @@ repos:
     name: codeformat
     stages: [commit]
     language: system
-    entry: poetry run codeFormat
+    entry: poetry run code_format
     types: [python]
     pass_filenames: false
 
@@ -14,7 +14,7 @@ repos:
     name: pytest
     stages: [commit]
     language: system
-    entry: poetry run pytest --isort --black --mypy --pylint --html=reports/codeTests/index.html
+    entry: poetry run pytest --isort --black --mypy --pylint --html=reports/code_tests/index.html
     types: [python]
     pass_filenames: false
 

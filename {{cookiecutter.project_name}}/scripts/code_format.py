@@ -1,45 +1,51 @@
-""" scripts/codeFormat.py """
-# pylint: disable=C0116 # Missing function or method docstring (missing-function-docstring)
+""" scripts/code_format.py """
 
 import os
 import pytest
 
 
-def mypyTests(_=None):
+def test_mypy(_=None):
+    """test_mypy"""
     pytest.main(["--mypy", "-m", "mypy"])
 
 
-def isortTests():
+def test_isort():
+    """test_isort"""
     pytest.main(["--isort", "-m", "isort"])
 
 
-def isortFix():
+def test_isort_fix():
+    """test_isort_fix"""
     os.system("isort {{cookiecutter.project_module}} tests scripts")
 
 
-def blackTests():
+def test_black():
+    """test_black"""
     pytest.main(["--black", "-m", "black"])
 
 
-def blackFix():
+def test_black_fix():
+    """test_black_fix"""
     os.system("black {{cookiecutter.project_module}} tests scripts")
 
 
-def pylintTests():
+def test_pylint():
+    """test_pylint"""
     pytest.main(["--pylint", "-m", "pylint"])
 
 
-def flake8Tests():
+def test_flake8():
+    """test_flake8"""
     pytest.main(["--flake8", "-m", "flake8"])
 
 
-def pytestCovTerm():
-    pytest.main(
-        ["--cov-report=term-missing", "--cov={{cookiecutter.project_module}}", "tests/"]
-    )
+def pytest_cov_term():
+    """pytest_cov_term"""
+    pytest.main(["--cov-report=term-missing", "--cov={{cookiecutter.project_module}}", "tests/"])
 
 
-def pytestTestReports():
+def pytest_test_reports():
+    """pytest_test_reports"""
     pytest.main(
         [
             "--isort",
@@ -52,5 +58,6 @@ def pytestTestReports():
     )
 
 
-def pytestCovReports():
+def pytest_cov_reports():
+    """pytest_cov_reports"""
     pytest.main(["--cov", "--cov-fail-under=50", "--cov-report=html:reports/codeCov/"])
