@@ -1,10 +1,8 @@
-"""
-Module information
-"""
+"""Module information."""
 
 
 def fib():
-    """fib"""
+    """Fib."""
     ex1 = 0
     ex2 = 1
 
@@ -18,7 +16,7 @@ def fib():
 
 
 def fibx(number: int):
-    """fibx"""
+    """Fibx."""
     myfib = fib()
     if number in [0, 1]:
         return number

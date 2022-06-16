@@ -1,16 +1,18 @@
-import os
+"""Post_gen_project.py."""
+# import os
 import sys
 
 
 def set_python_version():
+    """Set_python_version."""
     python_version = str(sys.version_info.major) + "." + str(sys.version_info.minor)
 
     file_names = ["pyproject.toml"]
     for file_name in file_names:
-        with open(file_name) as f:
+        with open(file_name, encoding="utf-8") as f:
             contents = f.read()
             contents = contents.replace(r"{python_version}", python_version)
-        with open(file_name, "w") as f:
+        with open(file_name, "w", encoding="utf-8") as f:
             f.write(contents)
 
 
@@ -20,6 +22,7 @@ TERMINATOR = "\x1b[0m"
 
 
 def main():
+    """Main."""
     set_python_version()
     print(SUCCESS + "Project successfully initialized" + TERMINATOR)
 

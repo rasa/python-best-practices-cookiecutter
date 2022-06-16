@@ -1,6 +1,4 @@
-"""
-pytest fixtures and functions
-"""
+"""Pytest fixtures and functions."""
 import importlib
 import logging
 import pathlib
@@ -12,7 +10,8 @@ logger = logging.getLogger(__name__)
 
 def pytest_collection_modifyitems(config, items):
     """
-    pytest add markers dynamically based on directory name
+    Pytest add markers dynamically based on directory name.
+
     <directoryname>Tests
     """
     # python 3.4/3.5 compat: rootdir = pathlib.Path(str(config.rootdir))
@@ -26,9 +25,7 @@ def pytest_collection_modifyitems(config, items):
 
 
 def pytest_generate_tests(metafunc):
-    """
-    If fixture begins with data_ add a parametrize fixture
-    """
+    """If fixture begins with data_ add a parametrize fixture."""
     for fixture in metafunc.fixturenames:
         if "data_" in fixture:
             logger.info("getting fixture=%s", fixture)
@@ -36,9 +33,7 @@ def pytest_generate_tests(metafunc):
 
 
 def load_tests(name):
-    """
-    loads test data dynamically utilizing data_<name>.py in tests/data directory
-    """
+    """Loads test data dynamically utilizing data_<name>.py in tests/data directory."""
     # Load module which contains test data
     tests_module = importlib.import_module("." + name, "data")
     # Tests are to be found in the variable `tests` of the module

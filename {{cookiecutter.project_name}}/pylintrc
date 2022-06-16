@@ -3,7 +3,7 @@
 [BASIC]
 argument-rgx=[a-z_][a-z0-9_]*$
 attr-rgx=[a-z_][a-z0-9_]*$
-module-rgx=[A-Za-z][A-Za-z0-9_-]*$
+module-rgx=[A-Za-z_][A-Za-z0-9_-]*$
 variable-rgx=[a-z_][a-z0-9_]*$
 
 [FORMAT]
