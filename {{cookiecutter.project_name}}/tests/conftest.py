@@ -8,7 +8,7 @@ import pytest
 logger = logging.getLogger(__name__)
 
 
-def pytest_collection_modifyitems(config, items):
+def pytest_collection_modifyitems(config: pytest.Config, items: list[pytest.Item]) -> None:
     """
     Pytest add markers dynamically based on directory name.
 
@@ -24,7 +24,7 @@ def pytest_collection_modifyitems(config, items):
                 item.add_marker(mark)
 
 
-def pytest_generate_tests(metafunc):
+def pytest_generate_tests(metafunc: pytest.Metafunc) -> None:
     """If fixture begins with data_ add a parametrize fixture."""
     for fixture in metafunc.fixturenames:
         if "data_" in fixture:
@@ -32,7 +32,7 @@ def pytest_generate_tests(metafunc):
             metafunc.parametrize(fixture, load_tests(fixture))
 
 
-def load_tests(name):
+def load_tests(name: str) -> None:
     """Loads test data dynamically utilizing data_<name>.py in tests/data directory."""
     # Load module which contains test data
     tests_module = importlib.import_module("." + name, "data")

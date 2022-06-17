@@ -1,4 +1,4 @@
-"""Tests/unit_tests/{{cookiecutter.project_name}}_tests.py."""
+"""File: tests/unit_tests/test_{{cookiecutter.project_name|lower}}.py."""
 import logging
 import sys
 
@@ -12,6 +12,6 @@ logger.addHandler(streamHandler)
 logger.setLevel(logging.INFO)
 
 
-def test_fib(data_fib) -> None:
+def test_fib(data_fib: tuple[int, int]) -> None:
     """Test_fib."""
     assert fibx(data_fib[0]) == data_fib[1]

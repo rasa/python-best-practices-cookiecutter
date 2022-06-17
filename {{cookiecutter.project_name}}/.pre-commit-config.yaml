@@ -22,6 +22,6 @@ repos:
     name: pytest
     stages: [push]
     language: system
-    entry: poetry run pytest --cov --cov-fail-under=50 --cov-report html:reports/codeCov/
+    entry: poetry run pytest --cov --cov-fail-under=50 --cov-report html:reports/code_cov/
     types: [python]
     pass_filenames: false

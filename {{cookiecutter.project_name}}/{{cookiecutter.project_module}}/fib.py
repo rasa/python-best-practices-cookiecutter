@@ -1,12 +1,13 @@
 """Module information."""
 
 
-def fib():
+def fib() -> int:
     """Fib."""
     ex1 = 0
     ex2 = 1
 
-    def get_next_number():
+    def get_next_number() -> int:
+        """Get_next_number."""
         nonlocal ex1, ex2
         ex3 = ex1 + ex2
         ex1, ex2 = ex2, ex3
@@ -15,7 +16,7 @@ def fib():
     return get_next_number
 
 
-def fibx(number: int):
+def fibx(number: int) -> int:
     """Fibx."""
     myfib = fib()
     if number in [0, 1]:
