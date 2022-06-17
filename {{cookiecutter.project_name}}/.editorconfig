@@ -57,6 +57,6 @@ space_redirects    = true  # like -sr
 # keep_padding       = true  # like -kp
 # function_next_line = true  # like -fn
 
-# Ignore the entire ".vendor" directory.
-[.vendor/**]
+# Ignore the entire "vendor" directory.
+[vendor/**]
 ignore = true
